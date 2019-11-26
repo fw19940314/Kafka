@@ -1,7 +1,6 @@
 package com.kafka.example.kafkaexample.client;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -11,14 +10,14 @@ import java.util.Properties;
 
 /**
  * @version 1.0  2019/11/24
- * @auther <a href="mailto:fengwei@uni-ubi.com">参宿</a>
+ * @auther <a href="mailto:fw19940314@gmail.com">jerry.feng</a>
  * @since 1.0
  */
 public class KafkaC {
 
     public static void main(String[] args) {
         Properties properties = new Properties();
-        Resource resource = new ClassPathResource("/kafka.properties");
+        Resource resource = new ClassPathResource("classpath:kafka.properties");
         try {
             properties.load(resource.getInputStream());
         } catch (IOException e) {
@@ -31,7 +30,6 @@ public class KafkaC {
             }
             //关闭资源
             kafkaProducer.close();
-
 
         }
     }
