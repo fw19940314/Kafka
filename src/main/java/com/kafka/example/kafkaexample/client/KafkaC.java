@@ -16,6 +16,10 @@ import java.util.Properties;
 public class KafkaC {
 
     public static void main(String[] args) {
+          //kafka提供配置属性
+//        ProducerConfig.BOOTSTRAP_SERVERS_CONFIG;
+//        ConsumerConfig.GROUP_ID_CONFIG;
+
         Properties properties = new Properties();
         Resource resource = new ClassPathResource("classpath:kafka.properties");
         try {
